@@ -16,10 +16,12 @@ import {useHistory} from "react-router-dom";
 import Image from "../../img/bgDefault.png";
 
 function Copyright() {
+    const history = useHistory()
+    const handleNavHome = () => history.push("/Home")
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {''}
-            <Link color="inherit" href="https://material-ui.com/">
+            <Link color="inherit" onClick={handleNavHome}>
                 HSE Liceum
             </Link>{' '}
             {new Date().getFullYear()}
